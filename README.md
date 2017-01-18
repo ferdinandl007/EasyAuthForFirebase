@@ -27,5 +27,7 @@ I recommend adding this function for the error alerts to the user
     }
     ```
     
-    
+   
+   
+   
     Hope this class will save you sometime! 
