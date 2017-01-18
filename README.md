@@ -25,9 +25,6 @@ I recommend adding this function for the error alerts to the user
         alert.addAction(ok)
         present(alert, animated: true,completion: nil)
     }
-  ```
-    
-   
-
-   
+    ```
+   
     Hope this class will save you sometime! 
