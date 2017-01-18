@@ -1,7 +1,5 @@
 //
 //  AuthProvider.swift
-//  Uber for driver
-//
 //  Created by Ferdinand Lösch on 26/11/2016.
 //  Copyright © 2016 Ferdinand Lösch. All rights reserved.
 //
