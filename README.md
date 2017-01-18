@@ -1,27 +1,28 @@
 # EasyAuthForFirebase
 a really easy inconvenient way integrating firebase authentication into your project 
-Just put the Swift into your project and the way easier way to integrate Firebase into your project as well the error handling being taken care for you!☺️
-
+Just put the Swift file into your project and the way easier way to integrate Firebase into your project as well the error handling being taken care for you!☺️
+The class is entirely written in swift 3 😉 
 Now you can just call the class like this 
-` @IBAction func logIn(_ sender: Any) {
-        if emailTextField.text != "" && passwordTextField.text != "" {
-            AuthProvider.Internal.login(withEmail: emailTextField.text!, password: passwordTextField.text!, loginHandler: {(message) in
-                if message != nil {
+```AuthProvider.Internal.login(withEmail: emailTextField.text!, password: passwordTextField.text!, loginHandler: {(message) in
+                if message != nil {
                     self.alertTheUser(title: "Problem with Authentication", message: message!)
                 } else {
-                    UberHandler.Instance.driver = self.emailTextField.text!
-                    self.emailTextField.text = ""
-                    self.passwordTextField.text = ""
-                    print("login")
-                    self.performSegue(withIdentifier: self.DRIVER_SEGUE, sender: nil)
-                    
+                    self.emailTextField.text = ""`
+                    self.passwordTextField.text = ""
+                    print("login") 
                 }
             })
-            
-        }else {
-            alertTheUser(title: "Email and Password is required", message: " please fill in the email and  password fields")
-        }
-        
-  
+
+```
+
+
+I recommend adding this function for the error alerts to the user
+```
+ private func  alertTheUser(title: String,message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true,completion: nil)
     }
-`
+    ```
+    Hope this class will save you sometime! 
